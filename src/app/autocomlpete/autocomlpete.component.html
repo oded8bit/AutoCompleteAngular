@@ -1,0 +1,11 @@
+  <div class="">
+    <label for="country:">Search for a country:</label>
+    <input id="country" type="text" class="" [(ngModel)]=query (keyup)=lookup()>
+  </div>
+  <div class="suggestions" *ngIf="filteredList.length > 0">
+      <ul *ngFor="let item of filteredList" >
+          <li >
+              <a (click)="select(item)">{{item.name}}</a>
+          </li>
+      </ul>
+  </div>
